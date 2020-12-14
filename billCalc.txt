@@ -1,0 +1,3 @@
+Get bill amount
+Get tip
+Get people attended

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" href = "billCalc.css">
+    <title>Bill Calculator</title>
+</head>
+<body>
+    <!--<h1>Bill Calculator </h1>-->
+    
+    <p>How much is the bill?</p>
+    <label for ="bill">$</label>
+   <input type ="text"  id ="bill" value = "Bill Amount" onfocus = "this.value=''" onclick ="myBill()"> <!--onfocus will clear textbox when you click it-->
+    <br>
+    <p>How was your service?</p>
+    
+    <select id = "service" >
+        <option selected disabled>Choose Option </option> <!--won't automatically choose an option-->
+        <option value = "outstanding">Outstanding(30%)</option>
+        <option value = "good">Good(20%)</option>
+        <option value = "ok">It was okay(15%)</option>
+        <option value = "bad">Bad(10%)</option>
+        <option value = "terrible">Terrible(5%)</option>
+        <!--custom option later-->
+    </select>
+    <br>
+
+    <p>How many people?</p>
+    <input type = "text" onfocus = "this.value = ''" id = "people" value ="people" onclick = "myBill()">
+    <label for = "people">people</label>
+    <br>
+    <br>
+    <p id ="totalCost"></p> <!--set it up as an array let =[amount, people, and service]-->
+    
+    <br>
+    <button id ="calulate">Calculate</button>
+
+    <script src = "billCalc.js"></script>
+</body>
+</html>
