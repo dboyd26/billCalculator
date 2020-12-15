@@ -48,17 +48,19 @@ function myBill()
   
     
 
-
+    
+    
     totalCost = (tip / numOfPeople);
-    console.log(totalCost);
     
     
     
-
     
 
-    //document.getElementById(totalCost).innerHTML = "totalCost";
-
+    
+    
+    
+    document.getElementById("totalCost").innerHTML = "$" + totalCost;
+    
 
 
 
