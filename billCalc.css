@@ -1,10 +1,56 @@
-select 
+button{
+    background-color:#FF8600;
+    padding: 25px;
+    font-family: 'Nerko One' ,cursive;
+    color: #F1F2F6;
+    font-size: 24px;
+    border-radius: 20px;
+    
+}
+h1
 {
- margin: 5px;
- padding: 6px;
- text-align: center;
- color: red;
+    color: #758BFD;
+    text-align: center;
+    font-family: 'Nerko One', cursive;
+
 }
 
+body
+{
+    background-color: #ffff;
+}
+
+div{
+    /* center box for content */
+    background-color:#27187E; 
+    padding: 30px;
+    border: 30px;
+    margin:30px;
+    text-align: center;
+    width: 500px;
+    height:500px;
+    position: fixed;
+    top: 50%;
+    left:50%;
+    margin-top: -270px;
+    margin-left: -270px;
+    color: #F1F2F6;
+    
+}
+
+
+    
+
+p
+{
+    font-size: 20px;
+    font-family: 'Anton' , sans-serif;
+}
+
+label
+{
+    font-size: 20px;
+    font-family: 'Anton', sans-serif;
+}
 
 /* I'm just trying out looks for this simple application.*/

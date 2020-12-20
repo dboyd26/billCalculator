@@ -1,41 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel = "stylesheet" href = "billCalc.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bill Calculator</title>
-</head>
-<body>
-    <!--<h1>Bill Calculator </h1>-->
-    
+    <link rel="stylesheet" type = "text/css" href="billCalc.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Nerko+One&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <h1>Bill Calculator</h1>
+    <div>
     <p>How much is the bill?</p>
-    <label for ="bill">$</label>
-   <input type ="text"  id ="bill" value = "Bill Amount" onfocus = "this.value=''" onclick ="myBill()"> <!--onfocus will clear textbox when you click it-->
-    <br>
+    <label for="bill">$</label>
+    <input
+      type="text"
+      id="bill"
+      value="Bill Amount"
+      onfocus="this.value=''"
+      onchange="myBill()"
+    />
+    <!--onfocus will clear textbox when you click it-->
+    <br />
     <p>How was your service?</p>
-    
-    <select id = "service" >
-        <option selected disabled>Choose Option </option> <!--won't automatically choose an option-->
-        <option value = "outstanding">Outstanding(30%)</option>
-        <option value = "good">Good(20%)</option>
-        <option value = "ok">It was okay(15%)</option>
-        <option value = "bad">Bad(10%)</option>
-        <option value = "terrible">Terrible(5%)</option>
-        <!--custom option later-->
+
+    <select id="service" onchange="myBill()">
+      <option selected disabled>Choose Option</option>
+      <!--won't automatically choose an option-->
+      <option value="outstanding">Outstanding(30%)</option>
+      <option value="good">Good(20%)</option>
+      <option value="ok">It was okay(15%)</option>
+      <option value="bad">Bad(10%)</option>
+      <option value="terrible">Terrible(5%)</option>
+      <!--custom option later-->
     </select>
-    <br>
+    <br />
 
     <p>How many people?</p>
-    <input type = "text" onfocus = "this.value = ''" id = "people" value ="people" onclick = "myBill()">
-    <label for = "people">people</label>
-    <br>
-    <br>
-    <p id ="totalCost"></p> <!--set it up as an array let =[amount, people, and service]-->
-    
-    <br>
-    
+    <input
+      type="text"
+      onfocus="this.value = ''"
+      id="people"
+      value="people"
+      onchange="myBill()"
+    />
+    <label for="people">people</label>
+    <br />
+    <br />
+    <button id="peopleBtn">Calculate</button>
+    <!--I want the information to display after all data is inputed-->
 
-    <script src = "billCalc.js"></script>
-</body>
+    <p id="total"></p>
+    </div>
+
+    <script src="billCalc.js"></script>
+  </body>
 </html>
